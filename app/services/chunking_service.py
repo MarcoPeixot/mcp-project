@@ -1,11 +1,20 @@
-class Chunking:
-    def chunk_text(text: str, chunk_size: int = 500, overlap: int = 100):
-        chunks = []
-        start = 0
+def chunk_text(text: str, chunk_size: int = 500, overlap: int = 100) -> list[str]:
+    if chunk_size <= 0:
+        raise ValueError("chunk_size must be greater than zero.")
 
-        while start < len(text):
-            end = start + chunk_size
-            chunks.append(text[start:end])
-            start += chunk_size - overlap
+    if overlap < 0:
+        raise ValueError("overlap must not be negative.")
 
-        return chunks
+    if overlap >= chunk_size:
+        raise ValueError("overlap must be smaller than chunk_size.")
+
+    chunks: list[str] = []
+    start = 0
+    step = chunk_size - overlap
+
+    while start < len(text):
+        end = start + chunk_size
+        chunks.append(text[start:end])
+        start += step
+
+    return chunks

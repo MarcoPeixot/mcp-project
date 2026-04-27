@@ -3,9 +3,12 @@ import sys
 from pathlib import Path
 
 from mcp.server.fastmcp import FastMCP
+from dotenv import load_dotenv
 
 if __package__ in (None, ""):
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+load_dotenv()
 
 from app.tools.document_tools import register_document_tools
 

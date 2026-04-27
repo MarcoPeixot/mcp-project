@@ -2,6 +2,14 @@
 
 Small MCP server that exposes local text documents as tools.
 
+## Features
+
+- List local documents
+- Read a document by ID
+- Search by exact text
+- Search semantically with embeddings
+- Answer questions from retrieved document chunks
+
 ## Run It
 
 For normal manual development, run the server as a Python module:
@@ -25,6 +33,7 @@ Useful environment variables:
 FASTMCP_HOST=127.0.0.1
 FASTMCP_PORT=8000
 FASTMCP_LOG_LEVEL=DEBUG
+OPENAI_API_KEY=your_api_key_here
 ```
 
 You can also override host and port directly from the CLI:
@@ -33,3 +42,5 @@ You can also override host and port directly from the CLI:
 uv run python -m app.main --port 8001
 uv run python -m app.main --host 0.0.0.0 --port 8001
 ```
+
+Semantic search and question answering require `OPENAI_API_KEY`.
