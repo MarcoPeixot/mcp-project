@@ -1,8 +1,10 @@
 from typing import Any
 from mcp.server.fastmcp import FastMCP
 from app.services.document_service import DocumentService
+from app.services.index_service import DocumentIndexService
 
 document_service = DocumentService()
+index_document - DocumentIndexService()
 
 def register_document_tools(mcp: FastMCP) -> None:
     @mcp.tool()
@@ -38,3 +40,11 @@ def register_document_tools(mcp: FastMCP) -> None:
             "title": document["title"],
             "metadata": document["metadata"]
         }
+
+
+    @mcp.tool()
+    def semantic_search(query: str) -> list[str]:
+        """
+        Search documents using semantic similarity.
+        """
+        return index_service.query(query)

@@ -5,6 +5,7 @@ description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "faiss-cpu>=1.13.2",
     "mcp[cli]>=1.27.0",
     "pydantic>=2.13.3",
     "python-dotenv>=1.2.2",
