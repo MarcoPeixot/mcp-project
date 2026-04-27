@@ -1,0 +1,8 @@
+Nota Fiscal de Serviço
+
+Prestador: Dev Solutions ME
+Cliente: Empresa Alpha LTDA
+Número da nota: NF-2026-001
+Valor total: R$ 12.000,00
+Data de emissão: 20/04/2026
+Descrição: Desenvolvimento de módulo de inteligência artificial.

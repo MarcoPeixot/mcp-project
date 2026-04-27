@@ -1,0 +1,9 @@
+Contrato de Prestação de Serviços
+
+Contratante: Empresa Alpha LTDA
+Contratado: Dev Solutions ME
+Valor: R$ 12.000,00
+Prazo de pagamento: 30 dias após emissão da nota fiscal.
+Vigência: 12 meses.
+
+Este contrato define as condições para prestação de serviços de desenvolvimento de software.
